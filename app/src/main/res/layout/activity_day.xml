@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="曜日を選択して下さい"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"/>
+
+    <RadioGroup android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/RadioGroup">
+
+        <RadioButton android:text="日"
+            android:id="@+id/RadioButton1"
+            android:layout_height="wrap_content"
+            android:layout_width="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="月"
+            android:id="@+id/RadioButtoni2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="火"
+            android:id="@+id/RadioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="水"
+            android:id="@+id/RadioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="木"
+            android:id="@+id/RadioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="金"
+            android:id="@+id/RadioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="土"
+            android:id="@+id/RadioButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/button" />
+
+</LinearLayout>
+
