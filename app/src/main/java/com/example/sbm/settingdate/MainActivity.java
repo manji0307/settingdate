@@ -13,19 +13,22 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView mTextView;
+    TextView nTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextView = (TextView) findViewById(R.id.textView);
+        mTextView = (TextView) findViewById(R.id.textView1);
 
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(this);
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(this);
+
+        nTextView = (TextView) findViewById(R.id.textView2);
 
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(this);
@@ -54,6 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 0,  // 初期値（分）
                 true);
         timePickerDialog.show();
+    }
+
+    protected void onActivityResult( int requestCode, int resultCode, Intent intent) {
+        if(resultCode == RESULT_OK) {
+            int res = intent.getIntExtra("RESULT", 0);
+
+        }
     }
 
 }

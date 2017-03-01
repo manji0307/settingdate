@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="曜日を選択して下さい"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView"/>
-
     <RadioGroup android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/RadioGroup">
@@ -23,7 +16,7 @@
         </RadioButton>
 
         <RadioButton android:text="月"
-            android:id="@+id/RadioButtoni2"
+            android:id="@+id/RadioButton2"
             android:layout_width="wrap_content"
             android:layout_height="50dp">
         </RadioButton>
@@ -60,11 +53,18 @@
 
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="曜日を選択して下さい"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OK"
-        android:id="@+id/button" />
+        android:id="@+id/okbutton" />
 
 </LinearLayout>
 
