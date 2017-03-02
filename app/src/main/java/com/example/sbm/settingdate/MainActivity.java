@@ -16,7 +16,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import static com.example.sbm.settingdate.R.id.textView2;
+//import static com.example.sbm.settingdate.R.id.textView2;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(this);
 
-        nTextView = (TextView) findViewById(textView2);
+        nTextView = (TextView) findViewById(R.id.textView2);
 
-        oTextView = (TextView) findViewById(textView2);
+        oTextView = (TextView) findViewById(R.id.textView3);
 
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(this);
@@ -81,15 +81,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
          }
     }
-
-    //protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //if (requestCode == Day) {
-            //if (resultCode == RESULT_OK) {
-                //String text = data.getStringExtra("Daydata");
-                //TextView textView3 = (TextView) findViewById(R.id.textView3);
-                //textView3.setText(text);
-            //}
-        //}
-    //}
-
 }
