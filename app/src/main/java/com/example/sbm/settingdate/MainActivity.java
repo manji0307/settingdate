@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView mTextView;
     TextView nTextView;
+    TextView oTextView;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         nTextView = (TextView) findViewById(textView2);
 
+        oTextView = (TextView) findViewById(textView2);
+
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(this);
 
@@ -54,35 +58,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.button1) {
-            showTimePickerDialog();
+            Intent intent1 = new Intent(this, Time.class);
+            startActivityForResult(intent1, 0);
         } else if (v.getId() == R.id.button2) {
-            Intent intent = new Intent(this, Day.class);
-            startActivityForResult(intent, 0);
+            Intent intent2 = new Intent(this, Day.class);
+            startActivityForResult(intent2, 1);
         }
     }
 
-    private void showTimePickerDialog() {
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this,
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        Log.d("UI-PARTS", String.valueOf(hourOfDay) + ":" + String.valueOf(minute));
-                    }
-                },
-                13, // 初期値（時間）
-                0,  // 初期値（分）
-                true);
-        timePickerDialog.show();
-    }
-
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //if (requestCode == Day) {
+        if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-                String text = data.getStringExtra("Daydata");
+                String text = data.getStringExtra("Timedata");
                 TextView textView2 = (TextView) findViewById(R.id.textView2);
                 textView2.setText(text);
             }
-        //}
+        }else if(requestCode == 1){
+            if (resultCode == RESULT_OK) {
+                String text = data.getStringExtra("Daydata");
+                TextView textView3 = (TextView) findViewById(R.id.textView3);
+                textView3.setText(text);
+            }
+         }
     }
+
+    //protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //if (requestCode == Day) {
+            //if (resultCode == RESULT_OK) {
+                //String text = data.getStringExtra("Daydata");
+                //TextView textView3 = (TextView) findViewById(R.id.textView3);
+                //textView3.setText(text);
+            //}
+        //}
+    //}
 
 }

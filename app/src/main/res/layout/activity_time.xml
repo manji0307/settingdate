@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/RadioGroup">
+
+        <RadioButton android:text="午前中"
+            android:id="@+id/RadioButton1"
+            android:layout_height="wrap_content"
+            android:layout_width="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="12-14"
+            android:id="@+id/RadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="14-16"
+            android:id="@+id/RadioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="16-18"
+            android:id="@+id/RadioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+        <RadioButton android:text="18-20"
+            android:id="@+id/RadioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+        </RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="時間を選択して下さい"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/okbutton" />
+
+</LinearLayout>
