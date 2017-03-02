@@ -15,11 +15,14 @@ public class Day extends AppCompatActivity {
 
     RadioGroup radioGroup;
     Button okbutton;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day);
+
+        textView = (TextView) findViewById(R.id.textView);
 
         // RadioGroup の取得
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
@@ -39,7 +42,7 @@ public class Day extends AppCompatActivity {
                 // RadioButton のテキストを取得
                 String text = radioButton.getText().toString();
 
-                TextView textView = (TextView) findViewById(R.id.textView);
+
                 textView.setText(String.valueOf(text));
             }
         });
@@ -49,7 +52,7 @@ public class Day extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("daydata", textView);
+                intent.putExtra("Daydata", textView.getText() + "");
                 setResult(RESULT_OK, intent);
 
                 finish();
