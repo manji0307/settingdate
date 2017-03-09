@@ -23,6 +23,8 @@ public class Time extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
 
+        textView = (TextView) findViewById(R.id.textView);
+
         // RadioGroup の取得
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
 
@@ -50,11 +52,16 @@ public class Time extends AppCompatActivity {
         okbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //if (textView.getText() == "") {
+                //   showAlertDialog();
+
+                //}else {
                 Intent intent = new Intent();
                 intent.putExtra("Timedata", textView.getText() + "");
                 setResult(RESULT_OK, intent);
 
                 finish();
+                //}
             }
         });
 
