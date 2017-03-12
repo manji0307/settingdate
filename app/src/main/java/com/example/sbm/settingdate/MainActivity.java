@@ -24,10 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView nTextView;
     TextView oTextView;
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     private GoogleApiClient client;
 
     @Override
@@ -63,8 +59,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.button2) {
             Intent intent2 = new Intent(this, Day.class);
             startActivityForResult(intent2, 1);
-        //} else if (v.getId() == R.id.button3) {
-
+        } else if (v.getId() == R.id.button3) {
+            // Jsonデータ取得
+            Jsonget jsonget = new jsonget();
+            jsonget();
 
 
 
@@ -86,4 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
          }
     }
+
+
+
+
 }
